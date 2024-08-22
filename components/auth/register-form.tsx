@@ -20,7 +20,7 @@ import { Button } from "../ui/button";
 import { login } from "@/actions/login";
 import { useState, useTransition } from "react";
 
-export const LoginForm = () => {
+export const RegisterForm = () => {
   const [error, setError] = useState<string | undefined>("");
   const [success, setSuccess] = useState<string | undefined>("");
   const [isPending, startTransition ] = useTransition();
@@ -44,9 +44,9 @@ export const LoginForm = () => {
   }
   return (
     <CardWrapper
-      headerLabel="Welcome back"
-      backButtonLabel="Don't have an account?"
-      backButtonHref="/auth/register"
+      headerLabel="Welcome!"
+      backButtonLabel="Already have an account?"
+      backButtonHref="/auth/login"
       showSocial
     >
       <Form {...form}>
@@ -86,7 +86,7 @@ export const LoginForm = () => {
           <FormError message={error}/>
           <FormSuccess message={success}/>
           <Button type="submit" disabled={isPending} className="w-full">
-            Login
+            Sign Up
           </Button>
         </form>
       </Form>
