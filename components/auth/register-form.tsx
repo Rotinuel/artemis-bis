@@ -29,6 +29,7 @@ export const RegisterForm = () => {
     defaultValues: {
       firstname: "",
       lastname: "",
+      phonenumber: "",
       email: "",
       password: "",
     },
@@ -81,6 +82,23 @@ export const RegisterForm = () => {
                     <Input
                       {...field} disabled={isPending}
                       placeholder="Doe"
+                      type="string"
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="phonenumber"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Phone Number</FormLabel>
+                  <FormControl>
+                    <Input
+                      {...field} disabled={isPending}
+                      placeholder="081 234 567 89"
                       type="string"
                     />
                   </FormControl>
