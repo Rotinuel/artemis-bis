@@ -5,7 +5,7 @@ import slugify from 'slugify';
 
 import { CategoriesWithProductsResponse } from "@/app/admin/categories/categories.types";
 import { CreateCategorySchemaServer } from "@/app/admin/categories/create-category.schema";
-import { createClient } from "@/supabase/server";
+import { createClient } from "@/supabase/client";
 
 const supabase = createClient;
 export const getCategoriesWithProducts =
